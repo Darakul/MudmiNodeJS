@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profile"> 
+    <title>MudemilNodeJS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <!-- Navigation Bar -->
+        <header>
+            <nav>
+                <img class="logo" src="<%= LOGOimg %>" alt="logo" style="width: 200px;"> 
+                <div class="links">
+                    <a href="#"><%= font1 %></a>
+                    <a href="#"><%= font2 %></a>
+                    <button class="button_med" href="#"><%= font3 %></button>
+                </div> 
+            </nav>
+        </header>
+
+        <!-- Contents-->
+        <section class="info">
+            <h1 class="content_font1"><%=contentfont1 %></h1>
+            <h4 class="content_font2"><%=contentfont2 %></h4>
+            <div class="icons">
+                <!-- Add Parameter that forEach loop-->
+                <% obj_icon.forEach(function(icon){ %>
+                <div class="icon">
+                    <img src="<%= icon.img %>" alt="email">
+                    <p class="icon_info"><%= icon.info %></p>
+                </div>
+
+                <% }) %>
+
+                <!-- Not use
+                <div class="icon">
+                    <img src="/img/facebook 1.svg" alt="facebook">
+                    <p class="icon_info">MeenMeen</p>
+                </div>
+                <div class="icon">
+                    <img src="/img/youtube 1.svg" alt="youtube">
+                    <p class="icon_info">MeenMeen</p>
+                </div>
+                <div class="icon">
+                    <img src="/img/twitter 1.svg" alt="twitter">
+                    <p class="icon_info">MeenMeen</p>
+                </div> -->
+            </div>
+        </section> 
+
+        <!-- Feature Bar -->
+        <section class="features">
+            <!-- Add Parameter that forEach loop-->
+            <% obj_feature.forEach(function(feature){ %>
+
+            
+            <div class="feature">
+                <img src= <%= feature.img %> alt="Programing">
+                <div class="feature_info">
+                    <p class="feature_top"><%= feature.top %></p>
+                    <p class="feature_bottom"><%= feature.bottom %></p>
+                </div>
+            </div>
+            <% }) %>
+            <!-- Comment not use
+            <div class="feature">
+                <img src="/img/AIot.svg" alt="AIot">
+                <div class="feature_info">
+                    <p class="feature_top">AIoT & Robotics</p>
+                    <p class="feature_bottom">Enjoy Coding and Playing 
+                        Python, ROS, Mechanict</p>
+                </div>
+            </div>
+            -->
+            <div class="feature">
+                <div class="feature_info">
+                    <p class="feature_more">Learn More</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
